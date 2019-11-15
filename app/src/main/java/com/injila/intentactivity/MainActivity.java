@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnActivity2,btnActivity3;
+    Button btnActivity2,btnActivity3,btnActivity4;
     EditText etfirstname,etlastname;
 
     @Override
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnActivity2 = findViewById(R.id.btnActivity2);
         btnActivity3 = findViewById(R.id.btnActivity3);
+        btnActivity4= findViewById(R.id.btnActivity4);
         etfirstname = findViewById(R.id.etfirstname);
         etlastname = findViewById(R.id.etlastname);
 
@@ -48,6 +49,13 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
+            }
+        });
+        btnActivity4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,com.injila.intentactivity.Main3Activity.class );
+                startActivity(intent);
             }
         });
     }
